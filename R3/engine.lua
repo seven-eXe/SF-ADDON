@@ -137,14 +137,14 @@ ffi.cdef[[
     struct stPlayerPool
     {
         int          m_nLargestId;
-        void         *m_pObject[MAX_PLAYERS];
-        int          m_bNotEmpty[MAX_PLAYERS];
-        int          m_bPrevCollisionFlag[MAX_PLAYERS];
+        void         *m_pObject[1004];
+        int          m_bNotEmpty[1004];
+        int          m_bPrevCollisionFlag[1004];
         int          m_nPing;
         int          m_nScore;
         int          m_nId;
         const char*  m_szName;
-        struct stLocalPlayer &m_pObject;
+        struct stLocalPlayer *m_pObject;
     }__attribute__ ((packed));
 ]]
 
